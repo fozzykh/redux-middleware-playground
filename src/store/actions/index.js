@@ -1,7 +1,7 @@
-import { TURN_ON, TURN_OFF } from './types';
+import { TURN_ON_ASYNC, TURN_OFF } from './types';
 
 export const turnOn = (roomType) => ({
-  type: TURN_ON,
+  type: TURN_ON_ASYNC,
   roomType
 });
 

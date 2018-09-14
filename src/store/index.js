@@ -1,11 +1,9 @@
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 
 import reducer from './reducers';
+import logging from '../store/middleware/logging';
+import turnOnAsync from '../store/middleware/turnOnAsync';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(reducer, composeEnhancers());
-
-window.store = store;
+const store = createStore(reducer, applyMiddleware(logging, turnOnAsync));
 
 export default store;

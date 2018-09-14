@@ -12,11 +12,11 @@ const AppContainer = ({ lights, toggleLight }) => (
 );
 
 const mapStateToProps = ({ lights }) => ({
-  lights
+  lights: lights
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  toggleLight: (roomType, currentState) => {
+  toggleLight: async (roomType, currentState) => {
     if (currentState === 'off') {
       dispatch(turnOn(roomType));
     } else {

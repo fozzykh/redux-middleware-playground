@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import lights from './lights';
+import lightsReducer from './lights';
 
 export default combineReducers({
-  lights
+  lights: lightsReducer
 });
