@@ -28,7 +28,7 @@ const renderLightsToggleButtons = (lights, onLightToggle) => Object.keys(lights)
     style={{ marginRight: 15 }}
     onClick={() => onLightToggle(light, lights[light])}
   >
-    Turn { getLightStatusAsText(lights, light)} Living Room
+    Turn { getLightStatusAsText(lights, light) } { light }
   </button>
 ));
 export default App;
